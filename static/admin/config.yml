@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Paparazzi69/aog-lentsweletau
   branch: main
-  base_url: https://lentsweletau.com
+  base_url: https://aog-oauth.glebpodsivaka.workers.dev
 
 media_folder: "static/images"
 public_folder: "/images"
