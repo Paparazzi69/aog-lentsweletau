@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(winget install:*)",
+      "Bash(export PATH=\"$PATH:/c/Users/user/AppData/Local/Microsoft/WinGet/Links\")",
+      "Bash(hugo version:*)",
+      "Bash(hugo --minify)",
+      "Bash(xargs wc:*)",
+      "Bash(hugo server:*)",
+      "Bash(pkill -f \"hugo server\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(taskkill /F /IM hugo.exe)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill /F /PID 10560)",
+      "Bash(taskkill //F //PID 10560)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)"
+    ]
+  }
+}

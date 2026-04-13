@@ -1,0 +1,146 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="container hero-content">
+      <h1>{{ i18n "welcome_message" }}</h1>
+      <p class="hero-subtitle">{{ i18n "hero_subtitle" }}</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="btn btn-primary" target="_blank" rel="noopener">{{ i18n "whatsapp_us" }}</a>
+        <a href="#services" class="btn btn-secondary">{{ i18n "our_services" }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Times -->
+<section id="services" class="section services-section">
+  <div class="container">
+    <h2 class="section-title">{{ i18n "service_times" }}</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>{{ i18n "sunday_service" }}</h3>
+        <p class="service-time">{{ i18n "sunday_time" }}</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>{{ i18n "wednesday_service" }}</h3>
+        <p class="service-time">{{ i18n "wednesday_time" }}</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>{{ i18n "friday_service" }}</h3>
+        <p class="service-time">{{ i18n "friday_time" }}</p>
+      </div>
+    </div>
+    <p class="services-welcome">{{ i18n "all_welcome" }}</p>
+  </div>
+</section>
+
+<!-- About Brief -->
+<section class="section about-brief-section">
+  <div class="container about-brief-grid">
+    <div class="about-brief-image">
+      <img src="/images/church-community.jpg" alt="AOG Lentsweletau community" width="600" height="400" loading="lazy">
+    </div>
+    <div class="about-brief-text">
+      <h2 class="section-title">{{ i18n "about_us" }}</h2>
+      <p>{{ i18n "about_brief" }}</p>
+      <a href="/{{ .Lang }}/about/" class="btn btn-primary">{{ i18n "read_more" }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="section events-section">
+  <div class="container">
+    <h2 class="section-title">{{ i18n "upcoming_events" }}</h2>
+    <div class="events-grid">
+      {{ $events := where .Site.RegularPages "Section" "events" }}
+      {{ $upcoming := first 3 $events }}
+      {{ if $upcoming }}
+        {{ range $upcoming }}
+        <article class="event-card">
+          <div class="event-date-badge">
+            <span class="event-month">{{ with .Params.event_date }}{{ . }}{{ end }}</span>
+          </div>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary }}</p>
+        </article>
+        {{ end }}
+      {{ else }}
+        <div class="event-card">
+          <h3>{{ i18n "sunday_service" }}</h3>
+          <p>{{ i18n "sunday_time" }} — {{ i18n "all_welcome" }}</p>
+        </div>
+        <div class="event-card">
+          <h3>{{ i18n "wednesday_service" }}</h3>
+          <p>{{ i18n "wednesday_time" }}</p>
+        </div>
+        <div class="event-card">
+          <h3>{{ i18n "friday_service" }}</h3>
+          <p>{{ i18n "friday_time" }}</p>
+        </div>
+      {{ end }}
+    </div>
+    <div class="section-cta">
+      <a href="/{{ .Lang }}/events/" class="btn btn-secondary">{{ i18n "view_all" }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Community Photos -->
+<section class="section gallery-preview-section">
+  <div class="container">
+    <h2 class="section-title">{{ i18n "our_community" }}</h2>
+    <div class="gallery-grid-small">
+      <img src="/images/gallery-1.jpg" alt="Sunday worship service" width="300" height="200" loading="lazy">
+      <img src="/images/gallery-2.jpg" alt="Church choir singing" width="300" height="200" loading="lazy">
+      <img src="/images/gallery-3.jpg" alt="Youth fellowship" width="300" height="200" loading="lazy">
+      <img src="/images/gallery-4.jpg" alt="Community outreach" width="300" height="200" loading="lazy">
+    </div>
+    <div class="section-cta">
+      <a href="/{{ .Lang }}/gallery/" class="btn btn-secondary">{{ i18n "view_all" }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Give Section -->
+<section class="section give-brief-section">
+  <div class="container give-brief-inner">
+    <h2 class="section-title">{{ i18n "give_title" }}</h2>
+    <p>{{ i18n "give_intro" }}</p>
+    <div class="give-methods-brief">
+      <div class="give-method">
+        <strong>{{ i18n "orange_money" }}</strong>
+        <p>{{ i18n "orange_money_desc" }}</p>
+      </div>
+      <div class="give-method">
+        <strong>{{ i18n "bank_transfer" }}</strong>
+        <p>{{ i18n "bank_transfer_desc" }}</p>
+      </div>
+    </div>
+    <a href="/{{ .Lang }}/give/" class="btn btn-primary">{{ i18n "donate_now" }}</a>
+  </div>
+</section>
+
+<!-- Facebook CTA -->
+<section class="section facebook-section">
+  <div class="container facebook-inner">
+    <h2>{{ i18n "follow_facebook" }}</h2>
+    <a href="{{ .Site.Params.facebook }}" class="btn btn-facebook" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+    </a>
+  </div>
+</section>
+
+{{ end }}

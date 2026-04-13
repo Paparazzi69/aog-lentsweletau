@@ -1,0 +1,53 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="/images/ag-logo.svg" alt="AG Logo" width="32" height="32" loading="lazy">
+        <strong>AOG Lentsweletau</strong>
+      </div>
+      <p class="footer-tagline">{{ i18n "footer_tagline" }}</p>
+      <p class="footer-ag">
+        <a href="{{ .Site.Params.agWebsite }}" target="_blank" rel="noopener">{{ i18n "part_of_ag" }}</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>{{ i18n "quick_links" }}</h3>
+      <ul class="footer-links">
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>{{ i18n "connect" }}</h3>
+      <ul class="footer-links">
+        <li>
+          <a href="tel:{{ .Site.Params.phone }}">
+            {{ i18n "phone" }}: {{ .Site.Params.phone }}
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/{{ .Site.Params.whatsapp }}" target="_blank" rel="noopener">
+            WhatsApp: {{ .Site.Params.phone }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener">
+            {{ i18n "follow_facebook" }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ .Site.Params.agWebsite }}" target="_blank" rel="noopener">
+            {{ i18n "visit_ag" }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; {{ now.Year }} {{ i18n "copyright" }}</p>
+  </div>
+</footer>

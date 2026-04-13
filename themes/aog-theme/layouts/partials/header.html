@@ -1,0 +1,46 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/{{ .Lang }}/" class="logo-link" aria-label="Home">
+      <div class="logo">
+        <img src="/images/ag-logo.svg" alt="Assemblies of God Logo" width="40" height="40" loading="eager">
+        <span class="site-name">AOG Lentsweletau</span>
+      </div>
+    </a>
+
+    <div class="header-right">
+      <!-- Language Switcher -->
+      <div class="lang-switch">
+        {{ $otherLang := cond (eq .Lang "en") "tn" "en" }}
+        {{ $translatedURL := printf "/%s/" $otherLang }}
+        {{ if not .IsHome }}
+          {{ with .File }}
+            {{ $translatedURL = printf "/%s/%s/" $otherLang .ContentBaseName }}
+          {{ end }}
+        {{ end }}
+        {{ if eq .Lang "en" }}
+          <span class="lang-active">EN</span>
+          <a href="{{ $translatedURL }}" class="lang-link">TN</a>
+        {{ else }}
+          <a href="{{ $translatedURL }}" class="lang-link">EN</a>
+          <span class="lang-active">TN</span>
+        {{ end }}
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.querySelector('.nav-menu').classList.toggle('nav-open');">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-menu" aria-label="Main navigation">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} nav-active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+      <a href="tel:{{ .Site.Params.phone }}" class="nav-link nav-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        {{ .Site.Params.phone }}
+      </a>
+    </nav>
+  </div>
+</header>

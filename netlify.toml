@@ -1,0 +1,12 @@
+# Alternative: Cloudflare Pages build config
+# Can also be used with Netlify as a fallback
+
+[build]
+  publish = "public"
+  command = "hugo --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.139.0"
+
+[context.production.environment]
+  HUGO_ENV = "production"

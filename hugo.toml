@@ -1,0 +1,94 @@
+baseURL = "https://aoglentsweletau.org/"
+title = "Assemblies of God Lentsweletau"
+theme = "aog-theme"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+enableRobotsTXT = true
+enableEmoji = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    contentDir = "content/en"
+    weight = 1
+    [languages.en.params]
+      description = "Welcome to Assemblies of God Church in Lentsweletau, Botswana"
+
+  [languages.tn]
+    languageName = "Setswana"
+    languageCode = "tn"
+    contentDir = "content/tn"
+    weight = 2
+    [languages.tn.params]
+      description = "Dumelang mo Kereke ya Assemblies of God Lentsweletau, Botswana"
+
+[params]
+  phone = "+26772751906"
+  whatsapp = "26772751906"
+  facebook = "https://www.facebook.com/lentsweletauaog/"
+  agWebsite = "https://ag.org"
+  email = "info@aoglentsweletau.org"
+  address = "Lentsweletau Village, Kweneng District, Botswana"
+  bgColor = "#FFF8F0"
+  goldAccent = "#D4A017"
+  darkBrown = "#2C1810"
+  greenAccent = "#4A7C59"
+  fireAccent = "#CC3300"
+
+[[languages.en.menus.main]]
+  name = "Home"
+  url = "/en/"
+  weight = 1
+[[languages.en.menus.main]]
+  name = "About"
+  url = "/en/about/"
+  weight = 2
+[[languages.en.menus.main]]
+  name = "Events"
+  url = "/en/events/"
+  weight = 3
+[[languages.en.menus.main]]
+  name = "Gallery"
+  url = "/en/gallery/"
+  weight = 4
+[[languages.en.menus.main]]
+  name = "Give"
+  url = "/en/give/"
+  weight = 5
+
+[[languages.tn.menus.main]]
+  name = "Gae"
+  url = "/tn/"
+  weight = 1
+[[languages.tn.menus.main]]
+  name = "Ka Rona"
+  url = "/tn/about/"
+  weight = 2
+[[languages.tn.menus.main]]
+  name = "Diketsahalo"
+  url = "/tn/events/"
+  weight = 3
+[[languages.tn.menus.main]]
+  name = "Ditshwantsho"
+  url = "/tn/gallery/"
+  weight = 4
+[[languages.tn.menus.main]]
+  name = "Neela"
+  url = "/tn/give/"
+  weight = 5
+
+[outputs]
+  home = ["HTML"]
+  page = ["HTML"]
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5

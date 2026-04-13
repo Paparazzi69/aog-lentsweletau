@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ i18n "site_title" }}{{ else }}{{ .Title }} — {{ i18n "site_title" }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ i18n "site_title" }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Schema.org Church markup -->
+  {{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Assemblies of God Lentsweletau",
+    "url": "{{ .Site.BaseURL }}",
+    "telephone": "{{ .Site.Params.phone }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lentsweletau",
+      "addressRegion": "Kweneng District",
+      "addressCountry": "BW"
+    },
+    "sameAs": [
+      "{{ .Site.Params.facebook }}"
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Assemblies of God",
+      "url": "https://ag.org"
+    }
+  }
+  </script>
+  {{ end }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+
+  <main id="content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+  {{ partial "whatsapp-button.html" . }}
+</body>
+</html>
