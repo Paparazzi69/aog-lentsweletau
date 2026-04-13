@@ -1,32 +1,19 @@
-# =============================================================
-# Decap CMS configuration — AOG Lentsweletau
-# GitHub backend + OAuth via Cloudflare Worker
-# Docs: https://decapcms.org/docs/
-# =============================================================
-
 backend:
   name: github
   repo: Paparazzi69/aog-lentsweletau
   branch: main
   base_url: https://aog-oauth.glebpodsivaka.workers.dev
 
-# Publish immediately (no draft workflow for small church site)
-publish_mode: simple
-
-# Image uploads go to static/images/
 media_folder: "static/images"
 public_folder: "/images"
 
-# =============================================================
-# COLLECTIONS
-# =============================================================
 collections:
 
   # -----------------------------------------------------------
-  # 1. SERVICE TIMES — edit Sunday / Wednesday / Friday times
+  # 1. SERVICE TIMES
   # -----------------------------------------------------------
   - name: "service_times"
-    label: "⏰ Service Times"
+    label: "Service Times"
     files:
       - name: "services"
         label: "Service Times"
@@ -36,43 +23,41 @@ collections:
             name: "sunday"
             widget: "object"
             fields:
-              - { label: "Name (English)", name: "name_en", widget: "string", default: "Sunday Worship" }
-              - { label: "Name (Setswana)", name: "name_tn", widget: "string", default: "Tirelo ya Sontaga" }
-              - { label: "Day (English)", name: "day_en", widget: "string", default: "Sunday" }
-              - { label: "Day (Setswana)", name: "day_tn", widget: "string", default: "Sontaga" }
-              - { label: "Time", name: "time", widget: "string", default: "10:00 AM" }
-              - { label: "Location (English)", name: "location_en", widget: "string", default: "Main Church Building" }
-              - { label: "Location (Setswana)", name: "location_tn", widget: "string", default: "Kago ya Kereke" }
-
+              - { label: "Name (English)", name: "name_en", widget: "string" }
+              - { label: "Name (Setswana)", name: "name_tn", widget: "string" }
+              - { label: "Day (English)", name: "day_en", widget: "string" }
+              - { label: "Day (Setswana)", name: "day_tn", widget: "string" }
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Location (English)", name: "location_en", widget: "string" }
+              - { label: "Location (Setswana)", name: "location_tn", widget: "string" }
           - label: "Midweek Service (Wednesday)"
             name: "wednesday"
             widget: "object"
             fields:
-              - { label: "Name (English)", name: "name_en", widget: "string", default: "Midweek Service" }
-              - { label: "Name (Setswana)", name: "name_tn", widget: "string", default: "Tirelo ya Gare ga Beke" }
-              - { label: "Day (English)", name: "day_en", widget: "string", default: "Wednesday" }
-              - { label: "Day (Setswana)", name: "day_tn", widget: "string", default: "Laboraro" }
-              - { label: "Time", name: "time", widget: "string", default: "6:00 PM" }
-              - { label: "Location (English)", name: "location_en", widget: "string", default: "Main Church Building" }
-              - { label: "Location (Setswana)", name: "location_tn", widget: "string", default: "Kago ya Kereke" }
-
+              - { label: "Name (English)", name: "name_en", widget: "string" }
+              - { label: "Name (Setswana)", name: "name_tn", widget: "string" }
+              - { label: "Day (English)", name: "day_en", widget: "string" }
+              - { label: "Day (Setswana)", name: "day_tn", widget: "string" }
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Location (English)", name: "location_en", widget: "string" }
+              - { label: "Location (Setswana)", name: "location_tn", widget: "string" }
           - label: "Youth Service (Friday)"
             name: "friday"
             widget: "object"
             fields:
-              - { label: "Name (English)", name: "name_en", widget: "string", default: "Youth Service" }
-              - { label: "Name (Setswana)", name: "name_tn", widget: "string", default: "Tirelo ya Banana" }
-              - { label: "Day (English)", name: "day_en", widget: "string", default: "Friday" }
-              - { label: "Day (Setswana)", name: "day_tn", widget: "string", default: "Labotlhano" }
-              - { label: "Time", name: "time", widget: "string", default: "5:00 PM" }
-              - { label: "Location (English)", name: "location_en", widget: "string", default: "Main Church Building" }
-              - { label: "Location (Setswana)", name: "location_tn", widget: "string", default: "Kago ya Kereke" }
+              - { label: "Name (English)", name: "name_en", widget: "string" }
+              - { label: "Name (Setswana)", name: "name_tn", widget: "string" }
+              - { label: "Day (English)", name: "day_en", widget: "string" }
+              - { label: "Day (Setswana)", name: "day_tn", widget: "string" }
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Location (English)", name: "location_en", widget: "string" }
+              - { label: "Location (Setswana)", name: "location_tn", widget: "string" }
 
   # -----------------------------------------------------------
-  # 2. EVENTS — English (add/edit/remove individual events)
+  # 2. EVENTS (English)
   # -----------------------------------------------------------
   - name: "en_events"
-    label: "📅 Events (English)"
+    label: "Events (English)"
     files:
       - name: "events_en"
         label: "Events Page"
@@ -80,7 +65,6 @@ collections:
         fields:
           - { label: "Page Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-
           - label: "Regular Services"
             name: "regular_services"
             widget: "list"
@@ -91,7 +75,6 @@ collections:
               - { label: "Time", name: "time", widget: "string" }
               - { label: "Location", name: "location", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
-
           - label: "Special Events"
             name: "special_events"
             widget: "list"
@@ -104,10 +87,10 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
 
   # -----------------------------------------------------------
-  # 3. EVENTS — Setswana
+  # 3. EVENTS (Setswana)
   # -----------------------------------------------------------
   - name: "tn_events"
-    label: "📅 Diketsahalo (Setswana)"
+    label: "Diketsahalo (Setswana)"
     files:
       - name: "events_tn"
         label: "Diketsahalo Page"
@@ -115,7 +98,6 @@ collections:
         fields:
           - { label: "Leina la Letlhakore", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-
           - label: "Ditirelo tsa Tlwaelo (Regular Services)"
             name: "regular_services"
             widget: "list"
@@ -126,7 +108,6 @@ collections:
               - { label: "Nako (Time)", name: "time", widget: "string" }
               - { label: "Lefelo (Location)", name: "location", widget: "string" }
               - { label: "Tlhaloso (Description)", name: "description", widget: "text" }
-
           - label: "Diketsahalo tse di Kgethegileng (Special Events)"
             name: "special_events"
             widget: "list"
@@ -139,10 +120,10 @@ collections:
               - { label: "Tlhaloso (Description)", name: "description", widget: "text" }
 
   # -----------------------------------------------------------
-  # 4. ENGLISH PAGES — About, Gallery, Give
+  # 4. PAGES (English)
   # -----------------------------------------------------------
   - name: "en_pages"
-    label: "📄 Pages (English)"
+    label: "Pages (English)"
     files:
       - name: "about_en"
         label: "About Page"
@@ -152,7 +133,6 @@ collections:
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "SEO Description", name: "description", widget: "string" }
           - { label: "Content", name: "body", widget: "markdown" }
-
       - name: "gallery_en"
         label: "Gallery Page"
         file: "content/en/gallery.md"
@@ -161,7 +141,6 @@ collections:
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "SEO Description", name: "description", widget: "string" }
           - { label: "Content", name: "body", widget: "markdown" }
-
       - name: "give_en"
         label: "Give / Contact Page"
         file: "content/en/give.md"
@@ -172,10 +151,10 @@ collections:
           - { label: "Content", name: "body", widget: "markdown" }
 
   # -----------------------------------------------------------
-  # 5. SETSWANA PAGES — Ka Rona, Ditshwantsho, Neela
+  # 5. PAGES (Setswana)
   # -----------------------------------------------------------
   - name: "tn_pages"
-    label: "📄 Matlhakore a Setswana"
+    label: "Matlhakore a Setswana"
     files:
       - name: "about_tn"
         label: "Ka Rona (About)"
@@ -185,7 +164,6 @@ collections:
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Tlhaloso ya SEO", name: "description", widget: "string" }
           - { label: "Diteng (Content)", name: "body", widget: "markdown" }
-
       - name: "gallery_tn"
         label: "Ditshwantsho (Gallery)"
         file: "content/tn/gallery.md"
@@ -194,7 +172,6 @@ collections:
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Tlhaloso ya SEO", name: "description", widget: "string" }
           - { label: "Diteng (Content)", name: "body", widget: "markdown" }
-
       - name: "give_tn"
         label: "Neela (Give / Contact)"
         file: "content/tn/give.md"
@@ -205,10 +182,10 @@ collections:
           - { label: "Diteng (Content)", name: "body", widget: "markdown" }
 
   # -----------------------------------------------------------
-  # 6. GALLERY IMAGES — upload + manage photos
+  # 6. GALLERY IMAGES
   # -----------------------------------------------------------
   - name: "gallery_images"
-    label: "🖼️ Gallery Images"
+    label: "Gallery Images"
     label_singular: "Image"
     folder: "static/images/gallery"
     create: true
@@ -216,7 +193,7 @@ collections:
     fields:
       - { label: "Image Title", name: "title", widget: "string" }
       - { label: "Photo", name: "image", widget: "image" }
-      - { label: "Alt Text (describe for accessibility)", name: "alt", widget: "string" }
+      - { label: "Alt Text", name: "alt", widget: "string" }
       - label: "Category"
         name: "category"
         widget: "select"
