@@ -15,6 +15,7 @@
 </section>
 
 <!-- Service Times -->
+{{ $svc := hugo.Data.services }}
 <section id="services" class="section services-section">
   <div class="container">
     <h2 class="section-title">{{ i18n "service_times" }}</h2>
@@ -23,22 +24,22 @@
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <h3>{{ i18n "sunday_service" }}</h3>
-        <p class="service-time">{{ i18n "sunday_time" }}</p>
+        <h3>{{ if eq .Lang "tn" }}{{ $svc.sunday.name_tn }}{{ else }}{{ $svc.sunday.name_en }}{{ end }}</h3>
+        <p class="service-time">{{ if eq .Lang "tn" }}{{ $svc.sunday.day_tn }}{{ else }}{{ $svc.sunday.day_en }}{{ end }} {{ $svc.sunday.time }}</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <h3>{{ i18n "wednesday_service" }}</h3>
-        <p class="service-time">{{ i18n "wednesday_time" }}</p>
+        <h3>{{ if eq .Lang "tn" }}{{ $svc.wednesday.name_tn }}{{ else }}{{ $svc.wednesday.name_en }}{{ end }}</h3>
+        <p class="service-time">{{ if eq .Lang "tn" }}{{ $svc.wednesday.day_tn }}{{ else }}{{ $svc.wednesday.day_en }}{{ end }} {{ $svc.wednesday.time }}</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <h3>{{ i18n "friday_service" }}</h3>
-        <p class="service-time">{{ i18n "friday_time" }}</p>
+        <h3>{{ if eq .Lang "tn" }}{{ $svc.friday.name_tn }}{{ else }}{{ $svc.friday.name_en }}{{ end }}</h3>
+        <p class="service-time">{{ if eq .Lang "tn" }}{{ $svc.friday.day_tn }}{{ else }}{{ $svc.friday.day_en }}{{ end }} {{ $svc.friday.time }}</p>
       </div>
     </div>
     <p class="services-welcome">{{ i18n "all_welcome" }}</p>

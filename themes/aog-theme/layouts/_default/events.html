@@ -1,0 +1,57 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-subtitle">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Regular Services -->
+    {{ with .Params.regular_services }}
+    <h2 class="section-title">{{ i18n "regular_services" }}</h2>
+    <div class="events-grid">
+      {{ range . }}
+      <div class="event-card">
+        <div class="event-date-badge">{{ .schedule }}</div>
+        <h3>{{ .title }}</h3>
+        <p>
+          <strong>{{ i18n "event_time" }}:</strong> {{ .time }}<br>
+          <strong>{{ i18n "event_location" }}:</strong> {{ .location }}<br>
+          {{ .description }}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Special Events -->
+    {{ with .Params.special_events }}
+    <h2 class="section-title" style="margin-top:3rem;">{{ i18n "special_events" }}</h2>
+    <div class="events-grid">
+      {{ range . }}
+      <div class="event-card">
+        <div class="event-date-badge">{{ .schedule }}</div>
+        <h3>{{ .title }}</h3>
+        <p>
+          <strong>{{ i18n "event_time" }}:</strong> {{ .time }}<br>
+          <strong>{{ i18n "event_location" }}:</strong> {{ .location }}<br>
+          {{ .description }}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Markdown body (contact/social links etc.) -->
+    {{ with .Content }}
+    <div class="content-body" style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--light-gray);">
+      {{ . }}
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}

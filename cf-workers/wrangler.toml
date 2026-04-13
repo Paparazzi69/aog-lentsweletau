@@ -1,0 +1,11 @@
+name = "aog-oauth"
+main = "oauth-proxy.js"
+compatibility_date = "2024-01-01"
+
+# Deploy with:
+#   cd cf-workers
+#   wrangler deploy
+#
+# Then set secrets:
+#   wrangler secret put GITHUB_CLIENT_ID
+#   wrangler secret put GITHUB_CLIENT_SECRET
