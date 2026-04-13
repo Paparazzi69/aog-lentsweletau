@@ -1,1 +1,2 @@
-/admin/* /admin/:splat 200
+# Redirect root to English homepage
+/ /en/ 302
