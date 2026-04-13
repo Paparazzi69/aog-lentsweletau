@@ -87,7 +87,6 @@ enableEmoji = false
 
 [outputs]
   home = ["HTML"]
-  page = ["HTML"]
 
 [sitemap]
   changefreq = "weekly"
