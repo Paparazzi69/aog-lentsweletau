@@ -87,13 +87,13 @@ export default {
         token: "${token}",
         provider: "github"
       });
-      // Decap CMS listens for this exact message format
+      // Decap CMS listens for this exact message format.
+      // Target must be "*" — opener is on a different domain (the Pages site)
       window.opener.postMessage(
         "authorization:github:success:" + msg,
-        window.location.origin
+        "*"
       );
     }
-    // Tell CMS we are about to send
     window.opener.postMessage("authorizing:github", "*");
     // Small delay then send token
     setTimeout(sendToken, 100);
