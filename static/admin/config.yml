@@ -8,8 +8,7 @@ backend:
   name: github
   repo: Paparazzi69/aog-lentsweletau
   branch: main
-  # OAuth proxy Worker URL — set after deploying cf-workers/oauth-proxy.js
-  base_url: https://aog-oauth.YOUR-SUBDOMAIN.workers.dev
+  base_url: https://aog-oauth.glebpodsivaka.workers.dev
 
 # Publish immediately (no draft workflow for small church site)
 publish_mode: simple
