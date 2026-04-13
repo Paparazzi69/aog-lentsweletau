@@ -1,26 +1,24 @@
 sunday:
-  name_en: "Sunday Worship"
-  name_tn: "Tirelo ya Sontaga"
-  day_en: "Sunday"
-  day_tn: "Sontaga"
-  time: "10:00 AM"
-  location_en: "Main Church Building"
-  location_tn: "Kago ya Kereke"
-
+  name_en: Sunday Worship
+  name_tn: Tirelo ya Sontaga
+  day_en: Sunday
+  day_tn: Sontaga
+  time: 9:30 AM
+  location_en: Main Church Building
+  location_tn: Kago ya Kereke
 wednesday:
-  name_en: "Midweek Service"
-  name_tn: "Tirelo ya Gare ga Beke"
-  day_en: "Wednesday"
-  day_tn: "Laboraro"
-  time: "6:00 PM"
-  location_en: "Main Church Building"
-  location_tn: "Kago ya Kereke"
-
+  name_en: Midweek Service
+  name_tn: Tirelo ya Gare ga Beke
+  day_en: Wednesday
+  day_tn: Laboraro
+  time: 6:00 PM
+  location_en: Main Church Building
+  location_tn: Kago ya Kereke
 friday:
-  name_en: "Youth Service"
-  name_tn: "Tirelo ya Banana"
-  day_en: "Friday"
-  day_tn: "Labotlhano"
-  time: "5:00 PM"
-  location_en: "Main Church Building"
-  location_tn: "Kago ya Kereke"
+  name_en: Youth Service
+  name_tn: Tirelo ya Banana
+  day_en: Friday
+  day_tn: Labotlhano
+  time: 5:00 PM
+  location_en: Main Church Building
+  location_tn: Kago ya Kereke
