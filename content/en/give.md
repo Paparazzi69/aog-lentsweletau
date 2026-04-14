@@ -98,7 +98,7 @@ For diaspora members and international supporters, you can give via PayPal:
       </div>
       <div>
         <strong>Facebook</strong><br>
-        <a href="https://www.facebook.com/lentsweletauaog/" target="_blank" rel="noopener">Follow us on Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61556569117681/" target="_blank" rel="noopener">Follow us on Facebook</a>
       </div>
     </div>
   </div>
