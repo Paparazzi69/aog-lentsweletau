@@ -1,10 +1,9 @@
 ---
-title: "Give"
-subtitle: "Support the work of God in Lentsweletau"
-description: "Ways to give tithes, offerings and donations to AOG Lentsweletau church"
-layout: "single"
+title: Give
+subtitle: Support the work of God in Lentsweletau
+description: Ways to give tithes, offerings and donations to AOG Lentsweletau church
+layout: single
 ---
-
 Your generous giving helps us worship, serve our community, and spread the Gospel in Lentsweletau and beyond. Thank you for your faithfulness!
 
 <div class="give-card">
@@ -16,7 +15,7 @@ The easiest way to give — works on any phone, no internet needed.
 <ol class="give-steps">
   <li>Dial <strong>*145#</strong> on your phone</li>
   <li>Select <strong>"Send Money"</strong> or <strong>"Pay Bill"</strong></li>
-  <li>Enter the church number: <strong>72 751 906</strong></li>
+  <li>Enter the church number: <strong>73 000 896</strong></li>
   <li>Enter the amount you wish to give</li>
   <li>Confirm with your PIN</li>
 </ol>
@@ -67,7 +66,7 @@ For diaspora members and international supporters, you can give via PayPal:
   <span class="give-category">Community Outreach</span>
 </div>
 
----
+- - -
 
 ## Contact Us
 
@@ -79,8 +78,8 @@ For diaspora members and international supporters, you can give via PayPal:
       </div>
       <div>
         <strong>Phone / WhatsApp</strong><br>
-        <a href="tel:+26772751906">+267 72 751 906</a><br>
-        <a href="https://wa.me/26772751906" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="tel:+26773000896">+267 73 000 896</a><br>
+        <a href="https://wa.me/26773000896" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>
     <div class="contact-item">
