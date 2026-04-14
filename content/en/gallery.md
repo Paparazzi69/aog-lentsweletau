@@ -22,6 +22,6 @@ See the life of our church — worshipping together, serving together, and growi
 
 ---
 
-*Want to share your photos? Send them to us via [WhatsApp](https://wa.me/26772751906)!*
+*Want to share your photos? Send them to us via [WhatsApp](https://wa.me/26773000896)!*
 
-Follow us on [Facebook](https://www.facebook.com/lentsweletauaog/) for more photos and updates.
+Follow us on [Facebook](https://www.facebook.com/profile.php?id=61556569117681) for more photos and updates.

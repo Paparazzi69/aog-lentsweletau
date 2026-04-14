@@ -79,8 +79,8 @@ For diaspora members and international supporters, you can give via PayPal:
       </div>
       <div>
         <strong>Phone / WhatsApp</strong><br>
-        <a href="tel:+26772751906">+267 72 751 906</a><br>
-        <a href="https://wa.me/26772751906" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="tel:+26773000896">+267 73 000 896</a><br>
+        <a href="https://wa.me/26773000896" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>
     <div class="contact-item">
@@ -99,7 +99,7 @@ For diaspora members and international supporters, you can give via PayPal:
       </div>
       <div>
         <strong>Facebook</strong><br>
-        <a href="https://www.facebook.com/lentsweletauaog/" target="_blank" rel="noopener">Follow us on Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61556569117681" target="_blank" rel="noopener">Follow us on Facebook</a>
       </div>
     </div>
   </div>
@@ -134,4 +134,4 @@ From Gaborone, take the A1 highway north towards Molepolole. Turn off at the Len
   <p>~60 km north of Gaborone</p>
 </div>
 
-*Questions about giving? [WhatsApp us](https://wa.me/26772751906) and we will be happy to help.*
+*Questions about giving? [WhatsApp us](https://wa.me/26773000896) and we will be happy to help.*

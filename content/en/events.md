@@ -43,4 +43,4 @@ special_events:
       region for worship, teaching and fellowship.
 ---
 
-For the latest updates on events and announcements, follow us on [Facebook](https://www.facebook.com/lentsweletauaog/) or [WhatsApp us](https://wa.me/26772751906).
+For the latest updates on events and announcements, follow us on [Facebook](https://www.facebook.com/profile.php?id=61556569117681) or [WhatsApp us](https://wa.me/26773000896).

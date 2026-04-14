@@ -79,8 +79,8 @@ Ba ba kwa dinageng tse dingwe ba ka neela ka PayPal:
       </div>
       <div>
         <strong>Mogala / WhatsApp</strong><br>
-        <a href="tel:+26772751906">+267 72 751 906</a><br>
-        <a href="https://wa.me/26772751906" target="_blank" rel="noopener">Buisana mo WhatsApp</a>
+        <a href="tel:+26773000896">+267 73 000 896</a><br>
+        <a href="https://wa.me/26773000896" target="_blank" rel="noopener">Buisana mo WhatsApp</a>
       </div>
     </div>
     <div class="contact-item">
@@ -99,7 +99,7 @@ Ba ba kwa dinageng tse dingwe ba ka neela ka PayPal:
       </div>
       <div>
         <strong>Facebook</strong><br>
-        <a href="https://www.facebook.com/lentsweletauaog/" target="_blank" rel="noopener">Re latelele mo Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61556569117681" target="_blank" rel="noopener">Re latelele mo Facebook</a>
       </div>
     </div>
   </div>
@@ -134,4 +134,4 @@ Go tswa Gaborone, tsaya tsela ya A1 go ya bokone kwa Molepolole. Retologa kwa ko
   <p>~60 km go ya bokone jwa Gaborone</p>
 </div>
 
-*Dipotso ka go neela? [WhatsApp rona](https://wa.me/26772751906) mme re tla itumelela go thusa.*
+*Dipotso ka go neela? [WhatsApp rona](https://wa.me/26773000896) mme re tla itumelela go thusa.*

@@ -37,4 +37,4 @@ special_events:
     description: "Khonferense ya rona ya ngwaga le ngwaga e kopanya badumedi go tswa mo kgaolong yotlhe go rapela, go ithuta le go kopana."
 ---
 
-Re latelele mo [Facebook](https://www.facebook.com/lentsweletauaog/) kgotsa [WhatsApp rona](https://wa.me/26772751906) go bona diphetogo tsa bosheng.
+Re latelele mo [Facebook](https://www.facebook.com/profile.php?id=61556569117681) kgotsa [WhatsApp rona](https://wa.me/26773000896) go bona diphetogo tsa bosheng.
