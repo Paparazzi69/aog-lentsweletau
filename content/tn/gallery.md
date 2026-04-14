@@ -1,8 +1,9 @@
 ---
-title: "Ditshwantsho"
-subtitle: "Lelapa la kereke ya rona le rapela, le kopana le go direla"
-description: "Ditshwantsho tsa ditirelo tsa kereke ya AOG Lentsweletau le diketsahalo tsa setshaba"
-layout: "single"
+title: Ditshwantsho
+subtitle: Lelapa la kereke ya rona le rapela, le kopana le go direla
+description: Ditshwantsho tsa ditirelo tsa kereke ya AOG Lentsweletau le
+  diketsahalo tsa setshaba
+layout: single
 ---
 
 ## Setshaba sa Rona
@@ -22,6 +23,6 @@ Bona botshelo jwa kereke ya rona — re rapela mmogo, re direla mmogo, re gola m
 
 ---
 
-*O batla go abelana ditshwantsho tsa gago? Di romele go rona ka [WhatsApp](https://wa.me/26772751906)!*
+*O batla go abelana ditshwantsho tsa gago? Di romele go rona ka [WhatsApp](https://wa.me/26773000896)!*
 
-Re latelele mo [Facebook](https://www.facebook.com/lentsweletauaog/) go bona ditshwantsho tse dingwe le diphetogo.
+Re latelele mo [Facebook](https://www.facebook.com/profile.php?id=61556569117681/) go bona ditshwantsho tse dingwe le diphetogo.
