@@ -6,7 +6,7 @@ layout: "events"
 regular_services:
   - title: "Tirelo ya Tumiso ya Sontaga"
     schedule: "Sontaga Mongwe le Mongwe"
-    time: "10:00 AM"
+    time: "9:30 AM"
     location: "Kago ya Kereke"
     description: "Kopano ya rona e kgolo ya beke ya pako, tumiso, thapelo le go rerwa ga Lefoko la Modimo. Mongwe le mongwe o amogelwa!"
   - title: "Tirelo ya Gare ga Beke"

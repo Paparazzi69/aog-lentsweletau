@@ -52,7 +52,7 @@ For the full statement of faith, visit [ag.org](https://ag.org).
   <div class="ministry-card">
     <div class="ministry-icon">🙏</div>
     <h3>Sunday Worship</h3>
-    <p>Our main gathering for praise, worship and the Word of God. Every Sunday at 10:00 AM.</p>
+    <p>Our main gathering for praise, worship and the Word of God. Every Sunday at 9:30 AM.</p>
   </div>
   <div class="ministry-card">
     <div class="ministry-icon">📖</div>

@@ -52,7 +52,7 @@ Go bona polelo e e feletseng ya tumelo, etela [ag.org](https://ag.org).
   <div class="ministry-card">
     <div class="ministry-icon">🙏</div>
     <h3>Tirelo ya Sontaga</h3>
-    <p>Kopano ya rona e kgolo ya pako, tumiso le Lefoko la Modimo. Sontaga mongwe le mongwe ka 10:00 AM.</p>
+    <p>Kopano ya rona e kgolo ya pako, tumiso le Lefoko la Modimo. Sontaga mongwe le mongwe ka 9:30 AM.</p>
   </div>
   <div class="ministry-card">
     <div class="ministry-icon">📖</div>
