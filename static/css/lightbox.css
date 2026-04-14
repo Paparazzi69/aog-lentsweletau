@@ -1,0 +1,136 @@
+/* =========================================================
+   Lightbox — universal image overlay
+   ========================================================= */
+
+/* Hoverable images */
+img.lightbox-trigger {
+  cursor: zoom-in;
+}
+
+/* Overlay */
+#lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+#lightbox-overlay.lb-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Image wrapper (handles scale animation) */
+#lightbox-img-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+}
+
+#lightbox-overlay.lb-open #lightbox-img-wrap {
+  transform: scale(1);
+}
+
+/* The image itself */
+#lightbox-img {
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Close button */
+#lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 10001;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 10px;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+#lightbox-close:hover {
+  opacity: 1;
+}
+
+/* Navigation arrows */
+#lightbox-prev,
+#lightbox-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10001;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 14px 18px;
+  border-radius: 4px;
+  opacity: 0.75;
+  transition: opacity 0.15s, background 0.15s;
+  user-select: none;
+}
+
+#lightbox-prev { left: 12px; }
+#lightbox-next { right: 12px; }
+
+#lightbox-prev:hover,
+#lightbox-next:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+#lightbox-prev.lb-hidden,
+#lightbox-next.lb-hidden {
+  display: none;
+}
+
+/* Counter */
+#lightbox-counter {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10001;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+#lightbox-counter.lb-hidden {
+  display: none;
+}
+
+/* Mobile: hide arrows on small screens (swipe handles nav) */
+@media (max-width: 600px) {
+  #lightbox-prev,
+  #lightbox-next {
+    display: none;
+  }
+}
