@@ -1,10 +1,10 @@
 ---
-title: "Neela"
-subtitle: "Tshegetsa tiro ya Modimo mo Lentsweletau"
-description: "Ditsela tsa go neela karolo ya lesome, dikabelo le dimpho kwa kerekeng ya AOG Lentsweletau"
-layout: "single"
+title: Neela
+subtitle: Tshegetsa tiro ya Modimo mo Lentsweletau
+description: Ditsela tsa go neela karolo ya lesome, dikabelo le dimpho kwa
+  kerekeng ya AOG Lentsweletau
+layout: single
 ---
-
 Go neela ga gago ka pelo e e ntle go re thusa go rapela, go direla setshaba sa rona, le go phatlalatsa Efangele mo Lentsweletau le kwa go feta. Re lebogela boikanyego jwa gago!
 
 <div class="give-card">
@@ -16,7 +16,7 @@ Tsela e e bonolo go gaisa ya go neela — e dira mo mogaleng ofe, go sa tlhokege
 <ol class="give-steps">
   <li>Leletsa <strong>*145#</strong> mo mogaleng wa gago</li>
   <li>Tlhopha <strong>"Send Money"</strong> kgotsa <strong>"Pay Bill"</strong></li>
-  <li>Tsenya nomoro ya kereke: <strong>72 751 906</strong></li>
+  <li>Tsenya nomoro ya kereke: <strong>73 000 896</strong></li>
   <li>Tsenya selekanyo se o batlang go se neela</li>
   <li>Netefatsa ka PIN ya gago</li>
 </ol>
@@ -67,7 +67,7 @@ Ba ba kwa dinageng tse dingwe ba ka neela ka PayPal:
   <span class="give-category">Go Direla Setshaba</span>
 </div>
 
----
+- - -
 
 ## Ikgolaganye le Rona
 
@@ -79,8 +79,8 @@ Ba ba kwa dinageng tse dingwe ba ka neela ka PayPal:
       </div>
       <div>
         <strong>Mogala / WhatsApp</strong><br>
-        <a href="tel:+26772751906">+267 72 751 906</a><br>
-        <a href="https://wa.me/26772751906" target="_blank" rel="noopener">Buisana mo WhatsApp</a>
+        <a href="tel:+267 73000896">+267 72 751 906</a><br>
+        <a href="https://wa.me/267 73000896" target="_blank" rel="noopener">Buisana mo WhatsApp</a>
       </div>
     </div>
     <div class="contact-item">
@@ -99,7 +99,7 @@ Ba ba kwa dinageng tse dingwe ba ka neela ka PayPal:
       </div>
       <div>
         <strong>Facebook</strong><br>
-        <a href="https://www.facebook.com/lentsweletauaog/" target="_blank" rel="noopener">Re latelele mo Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61556569117681/" target="_blank" rel="noopener">Re latelele mo Facebook</a>
       </div>
     </div>
   </div>
@@ -134,4 +134,4 @@ Go tswa Gaborone, tsaya tsela ya A1 go ya bokone kwa Molepolole. Retologa kwa ko
   <p>~60 km go ya bokone jwa Gaborone</p>
 </div>
 
-*Dipotso ka go neela? [WhatsApp rona](https://wa.me/26772751906) mme re tla itumelela go thusa.*
+*Dipotso ka go neela? [WhatsApp rona](https://wa.me/26773000896) mme re tla itumelela go thusa.*
