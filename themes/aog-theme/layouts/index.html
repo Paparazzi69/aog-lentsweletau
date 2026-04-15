@@ -15,7 +15,7 @@
 </section>
 
 <!-- Service Times -->
-{{ $svc := hugo.Data.services }}
+{{ $svc := .Site.Data.services }}
 <section id="services" class="section services-section">
   <div class="container">
     <h2 class="section-title">{{ i18n "service_times" }}</h2>
