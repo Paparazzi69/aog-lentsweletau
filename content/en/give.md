@@ -106,22 +106,8 @@ For diaspora members and international supporters, you can give via PayPal:
 
   <div class="prayer-form">
     <h3>Prayer Request</h3>
-    <p>Do you have a prayer need? Send it to us and our church will pray for you.</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email">
-      </div>
-      <div class="form-group">
-        <label for="message">Your Prayer Request</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
+    <p>Do you have a prayer need? Send it to us on WhatsApp and our church will pray for you.</p>
+    <a href="https://wa.me/26773000896?text=Hello%2C+I+have+a+prayer+request%3A+" class="btn btn-primary" target="_blank" rel="noopener">Send Prayer Request on WhatsApp</a>
   </div>
 </div>
 

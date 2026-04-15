@@ -106,22 +106,8 @@ Ba ba kwa dinageng tse dingwe ba ka neela ka PayPal:
 
   <div class="prayer-form">
     <h3>Kopo ya Thapelo</h3>
-    <p>A o na le kopo ya thapelo? E romele go rona mme kereke e tla go rapelela.</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <div class="form-group">
-        <label for="name-tn">Leina la Gago</label>
-        <input type="text" id="name-tn" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email-tn">Email ya Gago</label>
-        <input type="email" id="email-tn" name="email">
-      </div>
-      <div class="form-group">
-        <label for="message-tn">Kopo ya Thapelo ya Gago</label>
-        <textarea id="message-tn" name="message" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Romela Molaetsa</button>
-    </form>
+    <p>A o na le kopo ya thapelo? E romele go rona ka WhatsApp mme kereke e tla go rapelela.</p>
+    <a href="https://wa.me/26773000896?text=Dumela%2C+ke+na+le+kopo+ya+thapelo%3A+" class="btn btn-primary" target="_blank" rel="noopener">Romela Kopo ya Thapelo ka WhatsApp</a>
   </div>
 </div>
 
