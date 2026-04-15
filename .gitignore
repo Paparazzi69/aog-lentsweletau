@@ -16,3 +16,9 @@ Thumbs.db
 # Environment / secrets
 .env
 .env.local
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Node (temp installs like sharp for image processing)
+node_modules/
