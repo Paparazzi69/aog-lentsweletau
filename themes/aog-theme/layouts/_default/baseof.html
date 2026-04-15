@@ -4,14 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .IsHome }}{{ i18n "site_title" }}{{ else }}{{ .Title }} — {{ i18n "site_title" }}{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Language.Params.description }}{{ end }}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <!-- Hreflang for bilingual EN/TN -->
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}en/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="{{ .Title }}">
-  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ i18n "site_title" }}{{ else }}{{ .Title }} — {{ i18n "site_title" }}{{ end }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Language.Params.description }}{{ end }}">
   <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ i18n "site_title" }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/church-community.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
 
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
@@ -28,22 +41,56 @@
     "@context": "https://schema.org",
     "@type": "Church",
     "name": "Assemblies of God Lentsweletau",
+    "alternateName": "AOG Lentsweletau",
+    "description": "Spirit-filled Pentecostal church in Lentsweletau Village, Kweneng District, Botswana. Sunday worship 9:30 AM, Wednesday service 6:00 PM, Youth service Friday 5:00 PM.",
     "url": "{{ .Site.BaseURL }}",
     "telephone": "{{ .Site.Params.phone }}",
+    "image": "{{ .Site.BaseURL }}images/church-community.jpg",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Lentsweletau Village",
       "addressLocality": "Lentsweletau",
       "addressRegion": "Kweneng District",
       "addressCountry": "BW"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -24.37,
+      "longitude": 25.82
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:30",
+        "closes": "12:00",
+        "name": "Sunday Worship Service"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Wednesday",
+        "opens": "18:00",
+        "closes": "20:00",
+        "name": "Midweek Service"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "17:00",
+        "closes": "19:00",
+        "name": "Youth Service"
+      }
+    ],
     "sameAs": [
-      "{{ .Site.Params.facebook }}"
+      "{{ .Site.Params.facebook }}",
+      "https://ag.org"
     ],
     "parentOrganization": {
       "@type": "Organization",
       "name": "Assemblies of God",
       "url": "https://ag.org"
-    }
+    },
+    "hasMap": "https://maps.google.com/?q=Lentsweletau+Village,+Kweneng+District,+Botswana"
   }
   </script>
   {{ end }}

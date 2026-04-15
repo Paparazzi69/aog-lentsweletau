@@ -7,6 +7,7 @@ defaultContentLanguageInSubdir = true
 
 enableRobotsTXT = true
 enableEmoji = false
+disableKinds = ["taxonomy", "term"]
 
 [markup]
   [markup.goldmark]
