@@ -38,6 +38,8 @@ Transfer directly to our church bank account:
   <dd>62746396242</dd>
   <dt>Branch</dt>
   <dd>Molepolole</dd>
+  <dt>Branch Code</dt>
+  <dd>00267</dd>
   <dt>Reference</dt>
   <dd>Your name + purpose (e.g. "J Molefe - Tithe")</dd>
 </dl>

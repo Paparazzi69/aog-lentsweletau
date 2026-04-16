@@ -38,6 +38,8 @@ Romela go ya kwa akhaontong ya banka ya kereke:
   <dd>62746396242</dd>
   <dt>Lekala</dt>
   <dd>Molepolole</dd>
+  <dt>Khoutu ya Lekala</dt>
+  <dd>00267</dd>
   <dt>Referense</dt>
   <dd>Leina la gago + maikaelelo (sk. "J Molefe - Karolo ya Lesome")</dd>
 </dl>
