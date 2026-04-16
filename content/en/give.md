@@ -16,7 +16,7 @@ The easiest way to give — works on any phone, no internet needed.
 <ol class="give-steps">
   <li>Dial <strong>*145#</strong> on your phone</li>
   <li>Select <strong>"Send Money"</strong> or <strong>"Pay Bill"</strong></li>
-  <li>Enter the church number: <strong>72 751 906</strong></li>
+  <li>Enter the church number: <strong>73 000 896</strong></li>
   <li>Enter the amount you wish to give</li>
   <li>Confirm with your PIN</li>
 </ol>

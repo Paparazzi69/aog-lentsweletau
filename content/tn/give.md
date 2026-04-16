@@ -16,7 +16,7 @@ Tsela e e bonolo go gaisa ya go neela — e dira mo mogaleng ofe, go sa tlhokege
 <ol class="give-steps">
   <li>Leletsa <strong>*145#</strong> mo mogaleng wa gago</li>
   <li>Tlhopha <strong>"Send Money"</strong> kgotsa <strong>"Pay Bill"</strong></li>
-  <li>Tsenya nomoro ya kereke: <strong>72 751 906</strong></li>
+  <li>Tsenya nomoro ya kereke: <strong>73 000 896</strong></li>
   <li>Tsenya selekanyo se o batlang go se neela</li>
   <li>Netefatsa ka PIN ya gago</li>
 </ol>
