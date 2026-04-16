@@ -117,7 +117,7 @@ Go tswa Gaborone, tsaya tsela ya A1 go ya bokone kwa Molepolole. Retologa kwa ko
 
 <div class="map-placeholder">
   <p><strong>Motse wa Lentsweletau, Kgaolo ya Kweneng, Botswana</strong></p>
-  <p>~90 km go ya bokone jwa Gaborone</p>
+  <p>~66 km go ya bokone jwa Gaborone</p>
 </div>
 
 *Dipotso ka go neela? [WhatsApp rona](https://wa.me/26773000896) mme re tla itumelela go thusa.*

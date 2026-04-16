@@ -117,7 +117,7 @@ From Gaborone, take the A1 highway north towards Molepolole. Turn off at the Len
 
 <div class="map-placeholder">
   <p><strong>Lentsweletau Village, Kweneng District, Botswana</strong></p>
-  <p>~90 km north of Gaborone</p>
+  <p>~66 km north of Gaborone</p>
 </div>
 
 *Questions about giving? [WhatsApp us](https://wa.me/26773000896) and we will be happy to help.*
