@@ -35,7 +35,7 @@ Romela go ya kwa akhaontong ya banka ya kereke:
   <dt>Leina la Akhaonto</dt>
   <dd>Assemblies of God Lentsweletau</dd>
   <dt>Nomoro ya Akhaonto</dt>
-  <dd>Ikgolaganye le kereke go bona dintlha</dd>
+  <dd>62746396242</dd>
   <dt>Lekala</dt>
   <dd>Molepolole</dd>
   <dt>Referense</dt>

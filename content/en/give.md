@@ -35,7 +35,7 @@ Transfer directly to our church bank account:
   <dt>Account Name</dt>
   <dd>Assemblies of God Lentsweletau</dd>
   <dt>Account Number</dt>
-  <dd>Contact church for details</dd>
+  <dd>62746396242</dd>
   <dt>Branch</dt>
   <dd>Molepolole</dd>
   <dt>Reference</dt>
