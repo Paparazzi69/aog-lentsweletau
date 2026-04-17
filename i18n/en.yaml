@@ -110,6 +110,40 @@ visit_ag: "Visit Assemblies of God"
 copyright: "Assemblies of God Lentsweletau. All rights reserved."
 part_of_ag: "Part of the Assemblies of God family"
 
+# Story (pinned narrative on home)
+story_eyebrow: "Our Journey"
+story_01_label: "01 · BEGINNINGS"
+story_01_title: "A few families under an acacia tree"
+story_01_body: "Lentsweletau is a village 60 km north of Gaborone. Its name means 'the lion's rock'. Our church began here, with believers gathering in simplicity."
+story_02_label: "02 · GROWTH"
+story_02_title: "A family that gathers every Sunday"
+story_02_body: "Today we worship together in two Sunday services, meet midweek for prayer, and welcome young people on Fridays."
+story_03_label: "03 · INVITATION"
+story_03_title: "Come to Me, all who are weary, and I will give you rest"
+story_03_body: "Matthew 11:28"
+
+# Weekly rhythm (horizontal gallery)
+week_eyebrow: "Life of the community"
+week_heading: "Moments of the week"
+week_1_label: "Sunday"
+week_1_title: "Morning worship"
+week_2_label: "Wednesday"
+week_2_title: "Prayer gathering"
+week_3_label: "Friday"
+week_3_title: "Bible study"
+week_4_label: "Saturday"
+week_4_title: "Youth"
+week_5_label: "Sunday"
+week_5_title: "Evening worship"
+
+# Palette switcher
+palette_label: "Time of day"
+palette_auto: "Auto"
+palette_dawn: "Dawn"
+palette_day: "Day"
+palette_sunset: "Sunset"
+palette_night: "Night"
+
 # Common
 learn_more: "Learn More"
 view_all: "View All"
