@@ -1,0 +1,63 @@
+{{- /*
+  Hero with photo-backed parallax.
+  Layer stack (back → front):
+    1. .hero-photo       — real photo (/images/hero-bg.jpg), slowest, scroll-parallax
+    2. .hero-layer[data-depth] × 3 — atmospheric SVGs (glow, hills, foreground)
+       react to mouse + deviceorientation
+    3. .hero-overlay     — darkening wash for text legibility
+    4. .hero-content     — title, subtitle, CTAs (unchanged copy)
+
+  TODO: replace photo+SVG atmosphere with a real photo + depth-map shader
+  (WebGL displacement) once we have a proper hero image with captured depth.
+*/ -}}
+<section class="hero hero-parallax" id="hero">
+  <div class="hero-photo" aria-hidden="true"></div>
+
+  <div class="hero-layer hero-layer--glow" data-depth="0.08" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="aog-hero-sun" cx="72%" cy="32%" r="45%">
+          <stop offset="0%" stop-color="white" stop-opacity="0.55"/>
+          <stop offset="60%" stop-color="white" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="white" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1200" height="800" fill="url(#aog-hero-sun)"/>
+      <circle cx="870" cy="240" r="58" style="fill: var(--sun);"/>
+    </svg>
+  </div>
+
+  <div class="hero-layer hero-layer--hills" data-depth="0.22" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <path d="M0,540 Q200,480 400,510 T800,495 Q1000,470 1200,515 L1200,800 L0,800 Z"
+            style="fill: var(--hill-far); opacity: 0.35;"/>
+      <path d="M0,620 Q150,560 350,590 T700,580 Q900,560 1200,610 L1200,800 L0,800 Z"
+            style="fill: var(--hill-mid); opacity: 0.45;"/>
+    </svg>
+  </div>
+
+  <div class="hero-layer hero-layer--foreground" data-depth="0.42" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      {{- /* acacia silhouettes — decorative, non-literal */ -}}
+      <g style="fill: var(--silhouette); opacity: 0.38;">
+        <path d="M120,640 L122,610 L108,602 L130,588 L152,600 L138,612 L146,640 Z"/>
+        <path d="M150,642 L156,622 L166,626 L170,642 Z"/>
+        <path d="M1050,650 L1052,620 L1038,612 L1060,596 L1082,608 L1068,620 L1076,650 Z"/>
+        <path d="M1080,652 L1086,632 L1096,636 L1100,652 Z"/>
+      </g>
+      <path d="M0,735 Q300,712 600,728 T1200,722 L1200,800 L0,800 Z"
+            style="fill: var(--silhouette); opacity: 0.65;"/>
+    </svg>
+  </div>
+
+  <div class="hero-overlay">
+    <div class="container hero-content">
+      <h1>{{ i18n "welcome_message" }}</h1>
+      <p class="hero-subtitle">{{ i18n "hero_subtitle" }}</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="btn btn-primary" target="_blank" rel="noopener">{{ i18n "whatsapp_us" }}</a>
+        <a href="#services" class="btn btn-secondary">{{ i18n "our_services" }}</a>
+      </div>
+    </div>
+  </div>
+</section>

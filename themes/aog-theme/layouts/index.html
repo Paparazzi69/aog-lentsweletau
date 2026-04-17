@@ -1,25 +1,16 @@
 {{ define "main" }}
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay">
-    <div class="container hero-content">
-      <h1>{{ i18n "welcome_message" }}</h1>
-      <p class="hero-subtitle">{{ i18n "hero_subtitle" }}</p>
-      <div class="hero-buttons">
-        <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="btn btn-primary" target="_blank" rel="noopener">{{ i18n "whatsapp_us" }}</a>
-        <a href="#services" class="btn btn-secondary">{{ i18n "our_services" }}</a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Hero Section (parallax) -->
+{{ partial "hero-parallax.html" . }}
+
+{{ partial "section-divider.html" (dict "fill" "var(--white)") }}
 
 <!-- Service Times -->
 {{ $svc := .Site.Data.services }}
 <section id="services" class="section services-section">
-  <div class="container">
+  <div class="container reveal">
     <h2 class="section-title">{{ i18n "service_times" }}</h2>
-    <div class="services-grid">
+    <div class="services-grid stagger">
       <div class="service-card">
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -46,9 +37,11 @@
   </div>
 </section>
 
+{{ partial "section-divider.html" (dict "fill" "var(--bg)") }}
+
 <!-- About Brief -->
 <section class="section about-brief-section">
-  <div class="container about-brief-grid">
+  <div class="container about-brief-grid reveal">
     <div class="about-brief-image">
       <img src="/images/church-community.jpg" alt="AOG Lentsweletau community" width="600" height="400" loading="lazy">
     </div>
@@ -60,11 +53,78 @@
   </div>
 </section>
 
+<!-- Weekly Rhythm — horizontal scroll gallery -->
+<section class="aog-hgallery" aria-label="{{ i18n "week_heading" }}">
+  <div class="aog-hgallery__pin">
+    <div class="aog-hgallery__heading">
+      <div class="aog-hgallery__eyebrow">{{ i18n "week_eyebrow" }}</div>
+      <h2>{{ i18n "week_heading" }}</h2>
+    </div>
+    <div class="aog-hgallery__track" data-track>
+      {{- $grads := slice
+        (slice "#c4734a" "#5a2818")
+        (slice "#7d6f5a" "#2a1f15")
+        (slice "#e8b75a" "#8a4a1a")
+        (slice "#d4a574" "#3d2f23")
+        (slice "#a08a72" "#1a1008") -}}
+      {{- range $i, $_ := seq 1 5 -}}
+      {{ $idx := sub $i 0 }}{{/* 1..5 */}}
+      {{ $g := index $grads $idx }}
+      <article class="aog-hcard">
+        <svg class="aog-hcard__bg" viewBox="0 0 340 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="aog-week-g{{ $i }}" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="{{ index $g 0 }}"/>
+              <stop offset="100%" stop-color="{{ index $g 1 }}"/>
+            </linearGradient>
+          </defs>
+          <rect width="340" height="460" fill="url(#aog-week-g{{ $i }})"/>
+          <path d="M0,320 Q100,290 200,310 T340,300 L340,460 L0,460 Z" fill="#1a0a05" opacity="0.7"/>
+        </svg>
+        <div class="aog-hcard__body">
+          <span class="aog-hcard__label">{{ i18n (printf "week_%d_label" $i) }}</span>
+          <h4>{{ i18n (printf "week_%d_title" $i) }}</h4>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<!-- Pinned Story (3 stages) -->
+<section class="aog-story" id="story" aria-label="{{ i18n "story_eyebrow" }}">
+  <div class="aog-story__pin">
+    <div class="aog-story__bg" aria-hidden="true"></div>
+    <div class="aog-story__stage" data-stage="0">
+      <div class="aog-story__label">{{ i18n "story_01_label" }}</div>
+      <h3>{{ i18n "story_01_title" }}</h3>
+      <p>{{ i18n "story_01_body" }}</p>
+    </div>
+    <div class="aog-story__stage" data-stage="1">
+      <div class="aog-story__label">{{ i18n "story_02_label" }}</div>
+      <h3>{{ i18n "story_02_title" }}</h3>
+      <p>{{ i18n "story_02_body" }}</p>
+    </div>
+    <div class="aog-story__stage" data-stage="2">
+      <div class="aog-story__label">{{ i18n "story_03_label" }}</div>
+      <h3 class="aog-story__verse">{{ i18n "story_03_title" }}</h3>
+      <p>{{ i18n "story_03_body" }}</p>
+    </div>
+    <div class="aog-story__dots" aria-hidden="true">
+      <span class="aog-story__dot"></span>
+      <span class="aog-story__dot"></span>
+      <span class="aog-story__dot"></span>
+    </div>
+  </div>
+</section>
+
+{{ partial "section-divider.html" (dict "fill" "var(--white)") }}
+
 <!-- Upcoming Events -->
 <section class="section events-section">
-  <div class="container">
+  <div class="container reveal">
     <h2 class="section-title">{{ i18n "upcoming_events" }}</h2>
-    <div class="events-grid">
+    <div class="events-grid stagger">
       {{ $events := where .Site.RegularPages "Section" "events" }}
       {{ $upcoming := first 3 $events }}
       {{ if $upcoming }}
@@ -98,15 +158,17 @@
   </div>
 </section>
 
+{{ partial "section-divider.html" (dict "fill" "var(--bg)") }}
+
 <!-- Community Photos -->
 <section class="section gallery-preview-section">
-  <div class="container">
+  <div class="container reveal">
     <h2 class="section-title">{{ i18n "our_community" }}</h2>
     <div class="gallery-grid-small">
-      <img src="/images/gallery-1.jpg" alt="Sunday worship service" width="300" height="200" loading="lazy">
-      <img src="/images/gallery-2.jpg" alt="Church choir singing" width="300" height="200" loading="lazy">
-      <img src="/images/gallery-3.jpg" alt="Youth fellowship" width="300" height="200" loading="lazy">
-      <img src="/images/gallery-4.jpg" alt="Community outreach" width="300" height="200" loading="lazy">
+      <div class="photo-reveal"><img src="/images/gallery-1.jpg" alt="Sunday worship service" width="300" height="200" loading="lazy"></div>
+      <div class="photo-reveal"><img src="/images/gallery-2.jpg" alt="Church choir singing" width="300" height="200" loading="lazy"></div>
+      <div class="photo-reveal"><img src="/images/gallery-3.jpg" alt="Youth fellowship" width="300" height="200" loading="lazy"></div>
+      <div class="photo-reveal"><img src="/images/gallery-4.jpg" alt="Community outreach" width="300" height="200" loading="lazy"></div>
     </div>
     <div class="section-cta">
       <a href="/{{ .Lang }}/gallery/" class="btn btn-secondary">{{ i18n "view_all" }}</a>
@@ -114,12 +176,14 @@
   </div>
 </section>
 
+{{ partial "section-divider.html" (dict "fill" "var(--brown)") }}
+
 <!-- Give Section -->
 <section class="section give-brief-section">
-  <div class="container give-brief-inner">
+  <div class="container give-brief-inner reveal">
     <h2 class="section-title">{{ i18n "give_title" }}</h2>
     <p>{{ i18n "give_intro" }}</p>
-    <div class="give-methods-brief">
+    <div class="give-methods-brief stagger">
       <div class="give-method">
         <strong>{{ i18n "orange_money" }}</strong>
         <p>{{ i18n "orange_money_desc" }}</p>
@@ -133,9 +197,11 @@
   </div>
 </section>
 
+{{ partial "section-divider.html" (dict "fill" "var(--white)") }}
+
 <!-- Facebook CTA -->
 <section class="section facebook-section">
-  <div class="container facebook-inner">
+  <div class="container facebook-inner reveal">
     <h2>{{ i18n "follow_facebook" }}</h2>
     <a href="{{ .Site.Params.facebook }}" class="btn btn-facebook" target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>

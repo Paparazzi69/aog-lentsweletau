@@ -1,0 +1,12 @@
+{{- /*
+  Organic wave divider between sections.
+  Usage: {{ partial "section-divider.html" (dict "fill" "var(--bg-deep)" "flip" false) }}
+    - fill: CSS color/var for the wave (= next section's background)
+    - flip: true to mirror vertically (wave points upward)
+*/ -}}
+{{ $fill := .fill | default "var(--bg)" }}
+{{ $flip := .flip | default false }}
+<svg class="aog-divider {{ if $flip }}aog-divider--flip{{ end }}"
+     viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path d="M0,0 Q300,75 600,35 T1200,25 L1200,70 L0,70 Z" style="fill: {{ $fill | safeCSS }};"/>
+</svg>

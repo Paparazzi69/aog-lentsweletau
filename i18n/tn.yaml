@@ -110,6 +110,40 @@ visit_ag: "Etela Assemblies of God"
 copyright: "Assemblies of God Lentsweletau. Ditshwanelo tsotlhe di sireleditswe."
 part_of_ag: "Karolo ya lelapa la Assemblies of God"
 
+# Story (pinned narrative on home)
+story_eyebrow: "Loeto Lwa Rona"
+story_01_label: "01 · TSIMOLOGO"
+story_01_title: "Malapa a mmalwa kafa tlase ga mosu"
+story_01_body: "Lentsweletau ke motse o o mo bokoneng jwa 60 km go tswa Gaborone. Leina le raya 'lefika la tau'. Kereke ya rona e simologile fa, badumedi ba kopana ka bopelotshweu."
+story_02_label: "02 · KGOLO"
+story_02_title: "Lelapa le le kopanang Sontaga mongwe le mongwe"
+story_02_body: "Gompieno re rapela mmogo mo ditirelong tse pedi tsa Sontaga, re kopana gare ga beke go rapela, mme re amogela banana ka Labotlhano."
+story_03_label: "03 · KGALEMELO"
+story_03_title: "Tlang kwa go Nna, lotlhe ba lo lapileng, mme ke tla lo naya boikhutso"
+story_03_body: "Mathaio 11:28"
+
+# Weekly rhythm (horizontal gallery)
+week_eyebrow: "Botshelo jwa setshaba"
+week_heading: "Dinako tsa beke"
+week_1_label: "Sontaga"
+week_1_title: "Kobamelo ya moso"
+week_2_label: "Laboraro"
+week_2_title: "Thapelo mmogo"
+week_3_label: "Labotlhano"
+week_3_title: "Thuto ya Baebele"
+week_4_label: "Lamatlhatso"
+week_4_title: "Banana"
+week_5_label: "Sontaga"
+week_5_title: "Kobamelo ya maitseboa"
+
+# Palette switcher
+palette_label: "Nako ya letsatsi"
+palette_auto: "Ka Boyone"
+palette_dawn: "Mahube"
+palette_day: "Motshegare"
+palette_sunset: "Phirimo"
+palette_night: "Bosigo"
+
 # Common
 learn_more: "Ithute Go Feta"
 view_all: "Bona Tsotlhe"

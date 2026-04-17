@@ -30,7 +30,13 @@
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon" sizes="any">
 
+  <!-- Fonts (Fraunces is used by the pinned story; Google Fonts handles fallback) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
+
   <!-- CSS -->
+  <link rel="stylesheet" href="/css/palette.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/lightbox.css">
 
@@ -96,6 +102,8 @@
   {{ end }}
 </head>
 <body>
+  <div class="aog-scroll-progress" aria-hidden="true"></div>
+  {{ partial "palette-switch.html" . }}
   {{ partial "header.html" . }}
 
   <main id="content">
@@ -105,5 +113,6 @@
   {{ partial "footer.html" . }}
   {{ partial "whatsapp-button.html" . }}
   <script src="/js/lightbox.js"></script>
+  <script type="module" src="/js/site.js"></script>
 </body>
 </html>
