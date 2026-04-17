@@ -7,11 +7,12 @@
 :root {
   --transition-palette: 1.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Default = day palette (matches existing warm cream tone) */
-  --bg:         #f5ede0;
-  --bg-deep:    #e8d9c0;
-  --ink:        #2a1f15;
-  --ink-soft:   #5a4636;
+  /* Palette vars are decorative only — never touch theme's --bg / --brown / --white.
+     Used by: hero parallax atmospherics, section dividers, pinned story bg,
+     scroll-progress accent. Content sections keep their fixed theme colours. */
+  --p-depth:    #e8d9c0;   /* pinned story backdrop */
+  --p-ink:      #2a1f15;   /* text on .aog-story / hgallery heading */
+  --p-ink-soft: #5a4636;
   --sky-top:    #d6c9b0;
   --sky-bottom: #f5ede0;
   --hill-far:   #9a8f7a;
@@ -20,43 +21,72 @@
   --door:       #6b4a30;
   --sun:        rgba(255, 235, 200, 0.5);
   --accent:     #b8553a;
+
+  /* Atmospheric glow — mood light on the body, shows through transparent sections */
+  --glow-top:   rgba(255, 210, 150, 0.38);
+  --glow-bot:   rgba(184, 85, 58, 0.10);
 }
 
 html[data-palette="dawn"] {
-  --bg: #f3e4d0; --bg-deep: #e6cfb0;
-  --ink: #3a2418; --ink-soft: #7a5a42;
+  --p-depth: #e6cfb0;
+  --p-ink: #3a2418; --p-ink-soft: #7a5a42;
   --sky-top: #e8b89a; --sky-bottom: #f5d4b0;
   --hill-far: #a08a72; --hill-mid: #6b4f3a;
   --silhouette: #2c1810; --door: #5a3a25;
   --sun: rgba(255, 210, 160, 0.7);
+  --glow-top: rgba(255, 180, 130, 0.42);
+  --glow-bot: rgba(220, 110, 80, 0.14);
 }
 html[data-palette="day"] {
-  --bg: #f5ede0; --bg-deep: #e8d9c0;
-  --ink: #2a1f15; --ink-soft: #5a4636;
+  --p-depth: #e8d9c0;
+  --p-ink: #2a1f15; --p-ink-soft: #5a4636;
   --sky-top: #d6c9b0; --sky-bottom: #f5ede0;
   --hill-far: #9a8f7a; --hill-mid: #7d6f5a;
   --silhouette: #3d2f23; --door: #6b4a30;
   --sun: rgba(255, 235, 200, 0.5);
+  --glow-top: rgba(255, 215, 155, 0.32);
+  --glow-bot: rgba(184, 115, 70, 0.10);
 }
 html[data-palette="sunset"] {
-  --bg: #3a1f1a; --bg-deep: #2a1410;
-  --ink: #f5d8b0; --ink-soft: #d4a574;
+  --p-depth: #2a1410;
+  --p-ink: #f5d8b0; --p-ink-soft: #d4a574;
   --sky-top: #d4582c; --sky-bottom: #7a2418;
   --hill-far: #5a2818; --hill-mid: #3a1810;
   --silhouette: #1a0a05; --door: #3a1810;
   --sun: rgba(255, 180, 110, 0.85);
+  --glow-top: rgba(255, 140, 80, 0.42);
+  --glow-bot: rgba(120, 30, 20, 0.22);
 }
 html[data-palette="night"] {
-  --bg: #0e1729; --bg-deep: #070d18;
-  --ink: #e8d4a8; --ink-soft: #a89570;
+  --p-depth: #070d18;
+  --p-ink: #e8d4a8; --p-ink-soft: #a89570;
   --sky-top: #1a2840; --sky-bottom: #0e1729;
   --hill-far: #1f2d44; --hill-mid: #152038;
   --silhouette: #050810; --door: #1a2030;
   --sun: rgba(232, 212, 168, 0.4);
+  --glow-top: rgba(255, 200, 130, 0.18);
+  --glow-bot: rgba(40, 55, 100, 0.20);
 }
 
-html, body {
-  transition: background var(--transition-palette), color var(--transition-palette);
+/* === ATMOSPHERIC GLOW ====================================== */
+/* Palette mood-light. We paint the base cream on <html>, leave <body>
+   transparent, and place the glow on html::before fixed behind everything.
+   Content sections that have their own bg stay readable; transparent ones
+   let the warm/cool glow breathe through. */
+/* Canvas base — Dawn Rose. Replaces theme's stark cream to give the page
+   a warm rose undertone that ladders gracefully into sunset/night palettes. */
+html { background-color: #F2DFCC; }
+html body { background-color: transparent; }  /* beat theme's body bg rule */
+html::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70vw 60vh at 85% -10%, var(--glow-top), transparent 60%),
+    radial-gradient(ellipse 80vw 50vh at -15% 110%, var(--glow-bot), transparent 60%);
+  transition: background var(--transition-palette);
 }
 
 /* === FILM GRAIN ============================================ */
@@ -98,7 +128,7 @@ body::after {
   right: 1.2rem;
   z-index: 50;
   font-family: inherit;
-  color: var(--ink);
+  color: var(--p-ink);
 }
 .aog-palette-toggle {
   display: inline-flex;
@@ -275,8 +305,8 @@ body::after {
 .aog-story {
   position: relative;
   height: 300vh;                    /* 3 × viewport drives 3 stages */
-  background: var(--bg-deep);
-  color: var(--ink);
+  background: var(--p-depth);
+  color: var(--p-ink);
   transition: background var(--transition-palette), color var(--transition-palette);
 }
 .aog-story__pin {
@@ -314,7 +344,7 @@ body::after {
   font-size: 0.72rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--p-ink-soft);
   margin-bottom: 1.2rem;
 }
 .aog-story__stage h3 {
@@ -324,12 +354,12 @@ body::after {
   line-height: 1.22;
   letter-spacing: -0.015em;
   margin: 0 0 1rem;
-  color: var(--ink);
+  color: var(--p-ink);
 }
 .aog-story__stage p {
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--ink-soft);
+  color: var(--p-ink-soft);
   margin: 0;
 }
 .aog-story__dots {
@@ -347,7 +377,7 @@ body::after {
   background: rgba(42, 31, 21, 0.22);
   transition: background 0.4s;
 }
-.aog-story__dot.active { background: var(--ink); }
+.aog-story__dot.active { background: var(--p-ink); }
 
 /* Dark palettes invert the dot contrast */
 html[data-palette="sunset"] .aog-story__dot,
@@ -387,14 +417,14 @@ html[data-palette="night"]  .aog-story__dot { background: rgba(245, 237, 224, 0.
   top: 8vh;
   left: max(1.5rem, 8vw);
   z-index: 3;
-  color: var(--ink);
+  color: var(--p-ink);
   transition: color var(--transition-palette);
 }
 .aog-hgallery__eyebrow {
   font-size: 0.72rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--p-ink-soft);
   margin-bottom: 0.5rem;
 }
 .aog-hgallery__heading h2 {
@@ -467,7 +497,7 @@ html[data-palette="night"]  .aog-story__dot { background: rgba(245, 237, 224, 0.
   .aog-hcard { scroll-snap-align: center; }
 }
 html[data-palette="sunset"] .aog-story__dot.active,
-html[data-palette="night"]  .aog-story__dot.active { background: var(--ink); }
+html[data-palette="night"]  .aog-story__dot.active { background: var(--p-ink); }
 
 /* Load Fraunces (serif) only if present in the page — tolerated fallback to Georgia */
 @media (prefers-reduced-motion: reduce) {

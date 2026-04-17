@@ -23,3 +23,7 @@ Thumbs.db
 # Node (temp installs like sharp for image processing)
 node_modules/
 .gstack/
+
+# Local scratch / build artefacts
+Tempclaude-seo/
+cf-workers/.wrangler/
