@@ -112,13 +112,26 @@ function initReveals() {
   };
   // Normal reveal/stagger: want a "real" intersection (visual threshold)
   const ioReveal = new IntersectionObserver(onIntersect,
-    { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal, .stagger').forEach(el => ioReveal.observe(el));
   // photo-reveal starts with clip-path:inset(100%) → intersectionRatio is always 0.
   // Threshold 0 fires on any intersection so the clip can open.
   const ioPhoto = new IntersectionObserver(onIntersect,
     { threshold: 0, rootMargin: '0px 0px -80px 0px' });
   document.querySelectorAll('.photo-reveal').forEach(el => ioPhoto.observe(el));
+
+  // Safety net: if something never intersects (e.g. mobile layout settled with
+  // an element already past the rootMargin, or tall sections where the 10%
+  // threshold needs extra scroll), force-reveal everything still hidden once
+  // the page has loaded.
+  const sweep = () => {
+    document.querySelectorAll('.reveal:not(.in), .stagger:not(.in), .photo-reveal:not(.in)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight + 200) el.classList.add('in');
+    });
+  };
+  window.addEventListener('load', () => setTimeout(sweep, 400));
+  setTimeout(sweep, 2500);
 }
 
 /* ---------- pinned story (3 stages) ---------- */
