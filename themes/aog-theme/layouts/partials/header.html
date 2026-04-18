@@ -8,6 +8,9 @@
     </a>
 
     <div class="header-right">
+      <!-- Palette Switcher (inline in header) -->
+      {{ partial "palette-switch.html" . }}
+
       <!-- Language Switcher -->
       <div class="lang-switch">
         {{ $otherLang := cond (eq .Lang "en") "tn" "en" }}

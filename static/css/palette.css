@@ -121,27 +121,26 @@ body::after {
   pointer-events: none;
 }
 
-/* === PALETTE SWITCHER (collapsed sun icon + dropdown) ====== */
+/* === PALETTE SWITCHER (inline in header, next to lang toggle) ====== */
 .aog-palette-switch {
-  position: fixed;
-  bottom: 1.2rem;
-  right: 1.2rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   z-index: 50;
   font-family: inherit;
   color: var(--p-ink);
+  margin-right: 0.4rem;
 }
 .aog-palette-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 100px;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   cursor: pointer;
   color: inherit;
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
@@ -155,21 +154,21 @@ body::after {
 .aog-palette-menu {
   position: absolute;
   right: 0;
-  bottom: calc(100% + 0.5rem);
+  top: calc(100% + 0.5rem);
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
   padding: 0.35rem;
   min-width: 140px;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 14px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   opacity: 0;
-  transform: translateY(8px) scale(0.96);
-  transform-origin: bottom right;
+  transform: translateY(-6px) scale(0.96);
+  transform-origin: top right;
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -200,8 +199,8 @@ body::after {
 }
 
 @media (max-width: 600px) {
-  .aog-palette-switch { bottom: 5.5rem; right: 0.8rem; }  /* above WhatsApp FAB */
-  .aog-palette-toggle { width: 40px; height: 40px; }
+  .aog-palette-toggle { width: 32px; height: 32px; }
+  .aog-palette-toggle svg { width: 16px; height: 16px; }
 }
 
 /* === HERO PARALLAX ========================================= */
@@ -484,9 +483,27 @@ html[data-palette="night"]  .aog-story__dot { background: rgba(245, 237, 224, 0.
   margin: 0;
 }
 
-@media (max-width: 700px) {
-  .aog-hgallery { height: 320vh; }
-  .aog-hgallery__heading { top: 6vh; }
+/* On touch/narrow viewports, collapse the pinned scroll-jack into a native
+   horizontal swipe. No scroll-locking, no wasted vertical space. */
+@media (max-width: 900px) {
+  .aog-hgallery { height: auto; }
+  .aog-hgallery__pin {
+    position: static;
+    height: auto;
+    display: block;          /* stack heading above the track */
+    padding: 3rem 0 3.5rem;
+  }
+  .aog-hgallery__heading { position: relative; top: auto; left: auto; margin: 0 max(1.2rem, 6vw) 1.5rem; }
+  .aog-hgallery__track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    transform: none !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 max(1.2rem, 6vw) 0.5rem;
+    scrollbar-width: none;
+  }
+  .aog-hgallery__track::-webkit-scrollbar { display: none; }
+  .aog-hcard { scroll-snap-align: center; }
 }
 @media (prefers-reduced-motion: reduce) {
   /* Fallback: free horizontal scroll instead of pinned track */
