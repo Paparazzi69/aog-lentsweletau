@@ -180,6 +180,7 @@ function initHGallery(lenis) {
   const track = section.querySelector('[data-track]');
   if (!track) return;
   if (prefersReducedMotion) return;              // CSS fallback handles it
+  if (window.innerWidth <= 900) return;          // mobile: CSS native swipe handles it, no JS needed
 
   const apply = (scroll) => {
     const rect = section.getBoundingClientRect();

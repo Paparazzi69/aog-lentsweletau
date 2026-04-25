@@ -214,10 +214,10 @@ body::after {
 }
 .hero-parallax .hero-photo {
   position: absolute;
-  inset: -6% 0 -10% 0;         /* bleed so scroll-parallax never exposes edges */
+  inset: 0;                     /* no bleed needed — centered, parallax offset handled by JS */
   background-image: url('/images/hero-bg.jpg');
   background-size: cover;
-  background-position: 8% center;   /* pull the welcome signage near the left edge without clipping */
+  background-position: center;   /* centered so no letter gets cropped on narrow viewports */
   will-change: transform;
   transform: translate3d(0, 0, 0);
   z-index: 0;
